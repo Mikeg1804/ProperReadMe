@@ -83,7 +83,9 @@ This Challenge is graded based on the following criteria:
 
 * A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
 
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
+* The walkthrough video must demonstrate how a user would invoke the application from the comman
+
+* Repository contains multiple descriptid line.
 
 * The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
 
@@ -101,9 +103,7 @@ This Challenge is graded based on the following criteria:
 
 * Repository follows best practices for file structure and naming conventions.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.ve commit messages.
 
 * Repository contains a high-quality README with description and a link to walkthrough video.
 
