@@ -7,22 +7,34 @@ const fs = require('fs');
 
 const fileGenerator = (answersObject) => {
     return `
-# Purpose: ${answersObject.Purpose} 
-## Outcome: 
+# ${answersObject.Title}    
+### Purpose: 
+${answersObject.Purpose} 
+### Outcome: 
 ${answersObject.Outcome} 
 ### Installlation:
 ${answersObject.Installation} 
-
-
-- Example: ${answersObject.Examples} 
-- Credit: ${answersObject.Credit}  
-* Licenses: ${answersObject.Licenses} 
+### Features:
+${answersObject.Features}
+### Example: 
+${answersObject.Examples} 
+### Credit: 
+${answersObject.Credit}  
+### Licenses: 
+${answersObject.Licenses} 
     `;
   };
 
 // TODO: Create an array of questions for user input
 
   var x = [
+    {
+        // name = what key will the answer to this question be saved in
+        name: 'Title',
+        //  message = what message will be displayed to the user when this question is being asked
+        message: 'What is the project title?',
+        type: 'input',
+      },
     {
       // name = what key will the answer to this question be saved in
       name: 'Purpose',
@@ -33,6 +45,11 @@ ${answersObject.Installation}
     {
         name: 'Outcome',
         message: 'What was the outcome or what was learned from the project?',
+        type: 'input',
+    },
+    {
+        name: 'Features',
+        message: 'What are some features of this project?',
         type: 'input',
     },
     {
@@ -55,16 +72,7 @@ ${answersObject.Installation}
         message: 'What are any licensing rights that need to be disclosed for this project?',
         type: 'input',
     },
-    {
-        name: 'Badges',
-        message: 'What are some badges relating to this project?',
-        type: 'input',
-    },
-    {
-        name: 'Features',
-        message: 'What are some features of this project?',
-        type: 'input',
-    },
+
 ]
 
 
@@ -85,7 +93,7 @@ function init() {
     
         // TODO: Create a function to write README file
     
-        writeToFile('README-5.md', fileGenerator(answers))
+        writeToFile('README.md', fileGenerator(answers))
         
             console.log('success');
           });
